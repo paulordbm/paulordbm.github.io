@@ -9,14 +9,16 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "tailwind build ./src/index.tailwind.css -o ./src/index.css && react-scripts start",
+    "build": "tailwind build ./src/index.tailwind.css -o ./src/index.css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "flow-upgrade": "flow-upgrade"
+    "flow-upgrade": "flow-upgrade",
+    "tailwind": "tailwind"
   },
   "devDependencies": {
-    "flow-upgrade": "1.0.3"
+    "flow-upgrade": "1.0.3",
+    "tailwindcss": "0.1.6"
   }
 }
