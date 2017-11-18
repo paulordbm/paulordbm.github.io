@@ -69,10 +69,10 @@ export default class Terminal extends Component<{}, ConsoleState> {
     const command = input[0];
 
     switch (command) {
-      case "ls":
+      case COMMAND_LS:
         this.handleLs(input);
         break;
-      case "cat":
+      case COMMAND_CAT:
         this.handleCat(input);
         break;
       default:
@@ -98,10 +98,9 @@ export default class Terminal extends Component<{}, ConsoleState> {
     if (input.length === 2 && input[1] === FILE_README) {
       result = README_CONTENTS;
     } else {
-      result =
-        `cat: illegal options '${input
-          .slice(1, input.length - 1)
-          .join(" ")}'\n` + "usage: cat [file]";
+      result = `cat: illegal options '${input
+        .slice(1, input.length - 1)
+        .join(" ")}'\n usage: cat [file]`;
     }
 
     this.logResult(result);

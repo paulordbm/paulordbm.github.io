@@ -22,7 +22,6 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 // @flow
 import React, { Component } from "react";
 import Terminal from "./components/terminal/Terminal";
-import logo from "./logo.svg";
 import "./App.css";
 
 type Props = {};
