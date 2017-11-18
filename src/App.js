@@ -21,6 +21,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 
 // @flow
 import React, { Component } from "react";
+import Terminal from "./components/terminal/Terminal";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -31,13 +32,7 @@ class App extends Component<Props> {
     return (
       <div className="w-screen h-screen flex flex-col justify-center align-center bg-silver-light">
         <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg bg-bone-lighter">
-          <img src={logo} className="w-full mx-auto h-24 app-logo" alt="logo" />
-          <div className="px-6 px-4 mb-6 text-gunmetal">
-            <div className="font-bold text-xl mb-2">Welcome to React</div>
-            <p className="text-gunmetal-light text-base">
-              To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
-          </div>
+          <Terminal />
         </div>
       </div>
     );

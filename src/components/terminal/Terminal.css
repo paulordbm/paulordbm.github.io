@@ -1,0 +1,66 @@
+div.react-console-container {
+    font-size: 0.85em;
+    font-family: "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
+    width: 60em;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 20em;
+    background: #141A1f;
+    padding: 0.5em;
+    overflow: auto;
+    white-space: pre;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+span.react-console-prompt-label {
+    color: #51d88a;
+    font-weight: bold;
+}
+
+span.react-console-prompt {
+    color: #e6e2d4;
+}
+  
+div.react-console-focus span.react-console-cursor {
+    background: #e1b1ae;
+}
+
+div.react-console-nofocus span.react-console-cursor {
+    background: none;
+    color: #444;
+    outline: 0.1em solid #e1b1ae;
+    outline-offset: -0.1em;
+}
+
+div.react-console-focus span.react-console-cursor-idle {
+    animation: react-console-cursor-animation 1s infinite;
+}
+  
+@keyframes react-console-cursor-animation {
+    0% {
+      background: #e1b1ae;
+      color: #efede4;
+    }
+    50% {
+      background: #e1b1ae;
+      color: #efede4;
+    }
+    51% {
+      background: none;
+      color: #bd554d;
+    }
+    100% {
+      background: none;
+      color: #bd554d;
+    }
+}
+
+div.react-console-welcome {
+    color: #1fc5cb !important;
+}
+
+div.react-console-message {
+    color: #e1b1ae;
+    padding: 0.1em;
+}
