@@ -20,26 +20,36 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 ***************************************************************************************************/
 
 // @flow
-import React, { Component } from "react";
-import Terminal from "./components/terminal/Terminal";
-import { ContactForm } from "./components/contact-form/ContactForm";
-import "./App.css";
+import React from "react";
 
-type Props = {};
-
-class App extends Component<Props> {
-  render() {
-    return (
-      <div className="w-screen h-screen flex flex-col justify-center align-center bg-silver-light">
-        <div className="mx-auto max-w-sm w-1/2 rounded overflow-hidden shadow-lg bg-bone-lighter">
-          <Terminal />
-        </div>
-        <div className="mx-auto max-w-sm w-1/2 rounded overflow-hidden shadow-lg bg-bone-lighter absolute mb-4 pin-x pin-b">
-          <ContactForm action="https://formspree.io/paulo.rdbm@gmail.com" />
-        </div>
+export const ContactForm = (props: { action: string }) => {
+  return (
+    <form className="flex flex-col p-4" action={props.action} method="POST">
+      <input
+        className="block appearance-none w-full bg-bone-lightest text-bone-darker border border-steel-lightest hover:border-steel-light px-2 py-2 pr-2 mb-2 rounded shadow"
+        name="email"
+        placeholder="Your email"
+        type="email"
+      />
+      <textarea
+        className="block appearance-none w-full h-32 bg-bone-lightest text-bone-darker border border-steel-lightest hover:border-steel-light px-2 py-2 pr-2 mb-4 rounded shadow"
+        name="message"
+        placeholder="Your message"
+      />
+      <div className="flex items-center justify-between">
+        <a
+          class="inline-block align-baseline no-underline font-bold text-sm text-bone-dark hover:text-bone-darker"
+          href="https://formspree.io/"
+        >
+          Powered by formspree.io
+        </a>
+        <button
+          className="block appearance-none pin-y pin-r w-1/5 bg-steel hover:bg-steel-dark text-bone-lightest rounded shadow px-2 py-2"
+          type="submit"
+        >
+          Send
+        </button>
       </div>
-    );
-  }
-}
-
-export default App;
+    </form>
+  );
+};
